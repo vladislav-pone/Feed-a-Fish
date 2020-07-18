@@ -11,6 +11,6 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
-});
+$router->get('/', "LogController@index");
+$router->get('/log', "LogController@log");
+$router->post('/log', "LogController@create");
